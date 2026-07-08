@@ -1,0 +1,25 @@
+{
+  "name": "suitecloud-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for the NetSuite SuiteCloud (SDF) CLI: deploy, validate, import objects and files from any MCP client. Not affiliated with Oracle or NetSuite.",
+  "type": "module",
+  "bin": { "suitecloud-mcp": "dist/index.js" },
+  "files": ["dist"],
+  "engines": { "node": ">=18" },
+  "license": "MIT",
+  "keywords": ["mcp", "netsuite", "suitecloud", "sdf", "suitescript"],
+  "scripts": {
+    "build": "tsc && node -e \"require('node:fs').chmodSync('dist/index.js', 0o755)\"",
+    "prepare": "npm run build",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0",
+    "vitest": "^3.0.0"
+  }
+}
