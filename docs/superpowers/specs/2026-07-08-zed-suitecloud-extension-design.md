@@ -160,8 +160,9 @@ korrektem `@NApiVersion 2.1` / `@NScriptType`-Header und Tabstops):
   `deploy dryRun`, `list_objects`, `import_objects`) — bewusst nicht in CI.
 
 **Zed-Extension:**
-- CI: `cargo build --target wasm32-wasip2`, Validierung von
-  `extension.toml` und `snippets.json`.
+- CI: `cargo build` gegen das von der aktuellen `zed_extension_api`
+  geforderte WASM-Target (wasip1/wasip2 — bei Implementierung prüfen),
+  Validierung von `extension.toml` und `snippets.json`.
 - Manuelle Checkliste mit Fixture-Dateien (`deploy.xml`, Custom Record,
   ein Nicht-SDF-XML) über „Install Dev Extension": SDF-Dateien erkannt,
   normales XML unberührt, Snippets im richtigen Scope.
