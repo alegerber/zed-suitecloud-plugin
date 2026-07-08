@@ -93,12 +93,17 @@ Add to `.zed/tasks.json` in your project:
 
 ## SDF XML detection
 
-`deploy.xml` and `manifest.xml` are detected by name; object files are detected
-by their first line (the typed root element, e.g. `<customrecordtype …`). If a
-file is not picked up, map it manually in your Zed settings:
+`deploy.xml` and `manifest.xml` are always detected by name. Object files are
+detected by their first line (the typed root element, e.g.
+`<customrecordtype …`) — but **only if no other installed extension claims
+`.xml` files**. Zed's language matching always prefers a path-suffix match
+(such as a generic XML extension's `*.xml` claim) over first-line detection,
+so if you have an XML extension installed, add this to your Zed settings to
+make object files reliably open as SDF XML (user `file_types` settings beat
+any extension's detection):
 
 ```json
-{ "file_types": { "SDF XML": ["Objects/**/*.xml"] } }
+{ "file_types": { "SDF XML": ["**/Objects/**/*.xml"] } }
 ```
 
 ## Development

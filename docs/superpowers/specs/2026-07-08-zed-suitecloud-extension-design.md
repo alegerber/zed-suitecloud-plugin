@@ -126,6 +126,17 @@ generic XML — hence two-staged:
    directly with the root element including `scriptid=`.
 3. Fallback in the README: manual mapping via Zed's `file_types` setting.
 
+**Verified constraint (Zed source, July 2026):** `first_line_pattern` is a
+last-resort fallback in Zed's language matching — it is only evaluated when
+no registered language matches the path suffix, and it scores a hardcoded
+minimum. Any installed extension claiming `path_suffixes = ["xml"]`
+therefore always wins over first-line detection for object files, and this
+cannot be fixed from within this extension. With a generic XML extension
+installed, the user `file_types` setting (precedence tier `UserConfigured`,
+beats all extension matches) is the reliable mechanism — the README
+documents it as a regular setup step, not an edge case. `deploy.xml` and
+`manifest.xml` are unaffected (name-based suffix match).
+
 Highlighting: standard XML queries; additionally highlight `scriptid`
 attributes and `[scriptid=...]` references.
 
