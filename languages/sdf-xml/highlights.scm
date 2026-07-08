@@ -133,6 +133,13 @@
 
 ;; Attributes
 
+; SDF: emphasize scriptid attributes — the navigation anchors of an SDF
+; project. Must precede the generic attribute rules: earlier patterns win.
+((Attribute
+  (Name) @keyword
+  (AttValue) @string.special)
+ (#eq? @keyword "scriptid"))
+
 (Attribute (Name) @property)
 
 (Attribute (AttValue) @string)
@@ -166,9 +173,3 @@
 (Comment) @comment
 
 (ERROR) @error
-
-; SDF: emphasize scriptid attributes — the navigation anchors of an SDF project.
-((Attribute
-  (Name) @attribute.special
-  (AttValue) @string.special)
- (#eq? @attribute.special "scriptid"))
