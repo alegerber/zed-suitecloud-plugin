@@ -191,3 +191,17 @@ a correct `@NApiVersion 2.1` / `@NScriptType` header and tab stops):
   autocomplete (schemas would have to be extracted from the Oracle docs
   and maintained — a multi-month project).
 - `project:package` and further CLI commands as needed.
+- **Splitting `mcp-server/` into its own repository.** Deliberately kept in
+  the monorepo for v1: the coupling surface is a single string (the npm
+  package name in `src/lib.rs`), releases are already decoupled
+  (independent SemVer, `mcp-v*`-tag-scoped npm publish), and one repo means
+  one CI/issue tracker/README for a solo maintainer. Revisit when one of
+  these triggers fires: (a) Zed's announced deprecation of MCP-server
+  extensions in favor of the official MCP registry becomes concrete —
+  the extension then shrinks to language + snippets and the server stands
+  alone; (b) the server develops its own non-Zed audience (issues/PRs
+  from Claude Code/Cursor/Claude Desktop users mixing into the tracker);
+  (c) ownership diverges. The split stays cheap at any point:
+  `git subtree split` (or `git filter-repo`) extracts `mcp-server/` with
+  full history; afterwards only the `repository` field in package.json
+  needs updating.
