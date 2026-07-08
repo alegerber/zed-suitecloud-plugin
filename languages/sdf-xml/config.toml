@@ -1,0 +1,17 @@
+name = "SDF XML"
+grammar = "xml"
+path_suffixes = ["deploy.xml", "manifest.xml"]
+first_line_pattern = '^<(customrecordtype|customlist|customsegment|customtransactiontype|clientscript|usereventscript|suitelet|restlet|mapreducescript|scheduledscript|massupdatescript|workflowactionscript|bundleinstallationscript|sdfinstallationscript|portlet|workflow|savedsearch|savedcsvimport|crmcustomfield|entitycustomfield|itemcustomfield|itemnumbercustomfield|itemoptioncustomfield|othercustomfield|transactionbodycustomfield|transactioncolumncustomfield|emailtemplate|advancedpdftemplate|centercategory|centerlink|centertab|dataset|kpiscorecard|plugintype|pluginimplementation|promotioncode|publisheddashboard|role|sspapplication|sublist|subtab|translationcollection)[ >]'
+tab_size = 2
+
+[[brackets]]
+start = "<"
+end = ">"
+close = true
+newline = false
+
+[[brackets]]
+start = "\""
+end = "\""
+close = true
+newline = false
