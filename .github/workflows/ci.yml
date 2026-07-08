@@ -35,4 +35,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          node -e "['javascript','typescript','sdfxml'].forEach(f => JSON.parse(require('node:fs').readFileSync('snippets/'+f+'.json','utf8')))"
+          node -e "['javascript.json','typescript.json','sdf xml.json'].forEach(f => JSON.parse(require('node:fs').readFileSync('snippets/'+f,'utf8')))"

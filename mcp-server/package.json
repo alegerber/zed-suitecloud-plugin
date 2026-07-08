@@ -2,6 +2,7 @@
   "name": "suitecloud-mcp",
   "version": "0.1.0",
   "description": "MCP server for the NetSuite SuiteCloud (SDF) CLI: deploy, validate, import objects and files from any MCP client. Not affiliated with Oracle or NetSuite.",
+  "repository": "https://github.com/agerber/zed-suitecloud-plugin",
   "type": "module",
   "bin": { "suitecloud-mcp": "dist/index.js" },
   "files": ["dist"],

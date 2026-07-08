@@ -6,7 +6,7 @@ authors = ["Alexander Gerber <alex.gerber90@gmail.com>"]
 description = "NetSuite SuiteCloud/SDF support: SuiteScript snippets, SDF XML syntax highlighting, and a suitecloud CLI MCP server. Not affiliated with Oracle or NetSuite."
 repository = "https://github.com/agerber/zed-suitecloud-plugin"
 
-snippets = ["./snippets/javascript.json", "./snippets/typescript.json", "./snippets/sdfxml.json"]
+snippets = ["./snippets/javascript.json", "./snippets/typescript.json", "./snippets/sdf xml.json"]
 
 [grammars.xml]
 repository = "https://github.com/tree-sitter-grammars/tree-sitter-xml"

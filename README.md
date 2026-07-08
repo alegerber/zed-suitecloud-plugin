@@ -6,7 +6,7 @@ NetSuite SuiteCloud/SDF support for the [Zed](https://zed.dev) editor:
   for JavaScript (JSDoc) and TypeScript, with correct `@NApiVersion`/`@NScriptType` headers.
 - **SDF XML** — syntax highlighting and file detection for SDF object files,
   `deploy.xml`, and `manifest.xml`, plus snippets (`sdfdeploy`, `sdfmanifest`,
-  `sdfrecord`, `sdffield`, `sdfdeployment`).
+  `sdfmanifestapp`, `sdfrecord`, `sdffield`, `sdfdeployment`).
 - **MCP server** — the bundled [`suitecloud-mcp`](./mcp-server) context server lets
   Zed's Agent Panel (or any MCP client) run the `suitecloud` CLI: deploy, validate,
   import objects and files, scaffold projects.
