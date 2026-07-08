@@ -1,0 +1,17 @@
+id = "suitecloud"
+name = "SuiteCloud"
+version = "0.1.0"
+schema_version = 1
+authors = ["Alexander Gerber <alex.gerber90@gmail.com>"]
+description = "NetSuite SuiteCloud/SDF support: SuiteScript snippets, SDF XML syntax highlighting, and a suitecloud CLI MCP server. Not affiliated with Oracle or NetSuite."
+repository = "https://github.com/agerber/zed-suitecloud-plugin"
+
+snippets = ["./snippets/javascript.json", "./snippets/typescript.json", "./snippets/sdfxml.json"]
+
+[grammars.xml]
+repository = "https://github.com/tree-sitter-grammars/tree-sitter-xml"
+rev = "5000ae8f22d11fbe93939b05c1e37cf21117162d"
+path = "xml"
+
+[context_servers.suitecloud]
+name = "SuiteCloud"
