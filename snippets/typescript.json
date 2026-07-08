@@ -1,0 +1,156 @@
+{
+  "SuiteScript User Event (TS)": {
+    "prefix": "nsue",
+    "description": "SuiteScript 2.1 User Event script (TypeScript)",
+    "body": [
+      "/**",
+      " * @NApiVersion 2.1",
+      " * @NScriptType UserEventScript",
+      " */",
+      "import { EntryPoints } from 'N/types';",
+      "",
+      "export const beforeLoad: EntryPoints.UserEvent.beforeLoad = (context) => {",
+      "    ${1}",
+      "};",
+      "",
+      "export const beforeSubmit: EntryPoints.UserEvent.beforeSubmit = (context) => {",
+      "};",
+      "",
+      "export const afterSubmit: EntryPoints.UserEvent.afterSubmit = (context) => {",
+      "};",
+      ""
+    ]
+  },
+  "SuiteScript Suitelet (TS)": {
+    "prefix": "nssl",
+    "description": "SuiteScript 2.1 Suitelet (TypeScript)",
+    "body": [
+      "/**",
+      " * @NApiVersion 2.1",
+      " * @NScriptType Suitelet",
+      " */",
+      "import { EntryPoints } from 'N/types';",
+      "",
+      "export const onRequest: EntryPoints.Suitelet.onRequest = (context) => {",
+      "    ${1}",
+      "};",
+      ""
+    ]
+  },
+  "SuiteScript Map/Reduce (TS)": {
+    "prefix": "nsmr",
+    "description": "SuiteScript 2.1 Map/Reduce script (TypeScript)",
+    "body": [
+      "/**",
+      " * @NApiVersion 2.1",
+      " * @NScriptType MapReduceScript",
+      " */",
+      "import { EntryPoints } from 'N/types';",
+      "",
+      "export const getInputData: EntryPoints.MapReduce.getInputData = () => {",
+      "    ${1}",
+      "};",
+      "",
+      "export const map: EntryPoints.MapReduce.map = (context) => {",
+      "};",
+      "",
+      "export const reduce: EntryPoints.MapReduce.reduce = (context) => {",
+      "};",
+      "",
+      "export const summarize: EntryPoints.MapReduce.summarize = (summary) => {",
+      "};",
+      ""
+    ]
+  },
+  "SuiteScript RESTlet (TS)": {
+    "prefix": "nsrl",
+    "description": "SuiteScript 2.1 RESTlet (TypeScript)",
+    "body": [
+      "/**",
+      " * @NApiVersion 2.1",
+      " * @NScriptType Restlet",
+      " */",
+      "import { EntryPoints } from 'N/types';",
+      "",
+      "export const get: EntryPoints.RESTlet.get = (requestParams) => {",
+      "    ${1}",
+      "};",
+      "",
+      "export const post: EntryPoints.RESTlet.post = (requestBody) => {",
+      "};",
+      "",
+      "export const put: EntryPoints.RESTlet.put = (requestBody) => {",
+      "};",
+      "",
+      "export const doDelete: EntryPoints.RESTlet.delete_ = (requestParams) => {",
+      "};",
+      ""
+    ]
+  },
+  "SuiteScript Client Script (TS)": {
+    "prefix": "nscs",
+    "description": "SuiteScript 2.1 Client Script (TypeScript)",
+    "body": [
+      "/**",
+      " * @NApiVersion 2.1",
+      " * @NScriptType ClientScript",
+      " */",
+      "import { EntryPoints } from 'N/types';",
+      "",
+      "export const pageInit: EntryPoints.Client.pageInit = (context) => {",
+      "    ${1}",
+      "};",
+      "",
+      "export const fieldChanged: EntryPoints.Client.fieldChanged = (context) => {",
+      "};",
+      "",
+      "export const saveRecord: EntryPoints.Client.saveRecord = (context) => {",
+      "    return true;",
+      "};",
+      ""
+    ]
+  },
+  "SuiteScript Scheduled Script (TS)": {
+    "prefix": "nssch",
+    "description": "SuiteScript 2.1 Scheduled Script (TypeScript)",
+    "body": [
+      "/**",
+      " * @NApiVersion 2.1",
+      " * @NScriptType ScheduledScript",
+      " */",
+      "import { EntryPoints } from 'N/types';",
+      "",
+      "export const execute: EntryPoints.Scheduled.execute = (context) => {",
+      "    ${1}",
+      "};",
+      ""
+    ]
+  },
+  "SuiteScript Workflow Action (TS)": {
+    "prefix": "nswa",
+    "description": "SuiteScript 2.1 Workflow Action script (TypeScript)",
+    "body": [
+      "/**",
+      " * @NApiVersion 2.1",
+      " * @NScriptType WorkflowActionScript",
+      " */",
+      "import { EntryPoints } from 'N/types';",
+      "",
+      "export const onAction: EntryPoints.WorkflowAction.onAction = (context) => {",
+      "    ${1}",
+      "};",
+      ""
+    ]
+  },
+  "SuiteScript Module (TS)": {
+    "prefix": "nsmod",
+    "description": "Plain SuiteScript 2.1 module (TypeScript)",
+    "body": [
+      "/**",
+      " * @NApiVersion 2.1",
+      " */",
+      "${1}",
+      ""
+    ]
+  }
+}

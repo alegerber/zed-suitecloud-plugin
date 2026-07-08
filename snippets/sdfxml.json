@@ -1,0 +1,85 @@
+{
+  "SDF deploy.xml": {
+    "prefix": "sdfdeploy",
+    "description": "deploy.xml skeleton",
+    "body": [
+      "<deploy>",
+      "    <files>",
+      "        <path>~/FileCabinet/SuiteScripts/*</path>",
+      "    </files>",
+      "    <objects>",
+      "        <path>~/Objects/*</path>",
+      "    </objects>",
+      "</deploy>",
+      ""
+    ]
+  },
+  "SDF manifest.xml (ACP)": {
+    "prefix": "sdfmanifest",
+    "description": "manifest.xml for an account customization project",
+    "body": [
+      "<manifest projecttype=\"ACCOUNTCUSTOMIZATION\">",
+      "    <projectname>${1:project_name}</projectname>",
+      "    <frameworkversion>1.0</frameworkversion>",
+      "</manifest>",
+      ""
+    ]
+  },
+  "SDF manifest.xml (SuiteApp)": {
+    "prefix": "sdfmanifestapp",
+    "description": "manifest.xml for a SuiteApp",
+    "body": [
+      "<manifest projecttype=\"SUITEAPP\">",
+      "    <publisherid>${1:com.example}</publisherid>",
+      "    <projectid>${2:myapp}</projectid>",
+      "    <projectname>${3:My App}</projectname>",
+      "    <projectversion>${4:1.0.0}</projectversion>",
+      "    <frameworkversion>1.0</frameworkversion>",
+      "</manifest>",
+      ""
+    ]
+  },
+  "SDF Custom Record": {
+    "prefix": "sdfrecord",
+    "description": "Custom record type skeleton",
+    "body": [
+      "<customrecordtype scriptid=\"customrecord_${1:id}\">",
+      "    <label>${2:Label}</label>",
+      "    <customrecordcustomfields>",
+      "        <customrecordcustomfield scriptid=\"custrecord_${3:field_id}\">",
+      "            <label>${4:Field Label}</label>",
+      "            <fieldtype>${5:TEXT}</fieldtype>",
+      "        </customrecordcustomfield>",
+      "    </customrecordcustomfields>",
+      "</customrecordtype>",
+      ""
+    ]
+  },
+  "SDF Custom Body Field": {
+    "prefix": "sdffield",
+    "description": "Transaction body custom field skeleton",
+    "body": [
+      "<transactionbodycustomfield scriptid=\"custbody_${1:id}\">",
+      "    <label>${2:Label}</label>",
+      "    <fieldtype>${3:TEXT}</fieldtype>",
+      "    <bodysale>${4:T}</bodysale>",
+      "</transactionbodycustomfield>",
+      ""
+    ]
+  },
+  "SDF Script Deployment": {
+    "prefix": "sdfdeployment",
+    "description": "Script deployment block",
+    "body": [
+      "<scriptdeployments>",
+      "    <scriptdeployment scriptid=\"customdeploy_${1:id}\">",
+      "        <status>${2:TESTING}</status>",
+      "        <loglevel>${3:DEBUG}</loglevel>",
+      "        <allroles>T</allroles>",
+      "        <isdeployed>T</isdeployed>",
+      "    </scriptdeployment>",
+      "</scriptdeployments>",
+      ""
+    ]
+  }
+}
